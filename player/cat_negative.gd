@@ -2,7 +2,6 @@ extends Sprite2D
 
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $"Sprite2D"
-var visible_ = true
 var is_moving = false
 
 func _init():
@@ -29,8 +28,6 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	if is_moving:
-		return
 
 func move(direction: Vector2):
 	if is_moving:

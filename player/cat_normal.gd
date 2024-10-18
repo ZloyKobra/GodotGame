@@ -3,7 +3,6 @@ extends Sprite2D
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $"Sprite2D"
 var is_moving = false
-var visible_ = true
 
 
 func _physics_process(delta):
