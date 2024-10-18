@@ -13,12 +13,15 @@ func _physics_process(delta):
 		is_moving = false
 		return
 	
-	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1)
+	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 3)
 	
 func _process(delta):
-	print(is_moving, "   ", self.visible, "  cat_1")
+	#print(is_moving, "   ", self.visible, "  cat_1")
 	if is_moving:
 		return
+	if Input.is_action_just_pressed("Switch_condition"):
+		print("\n\n\n\n  switch cat 1\n\n\n\n")
+		self.visible = not self.visible
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
 	elif Input.is_action_just_pressed("right"):
@@ -27,10 +30,11 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	elif Input.is_action_just_pressed("Switch_condition") and not is_moving:
-		self.visible = not self.visible
+
 
 func move(direction: Vector2):
+	if is_moving:
+		return
 	if not self.visible:
 		return
 	var current_tile: Vector2i = tile_map.local_to_map(global_position)
