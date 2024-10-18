@@ -6,7 +6,7 @@ var is_moving = false
 
 
 func _physics_process(delta):
-	if is_moving == false:
+	if not is_moving:
 		return
 	if global_position == sprite_2d.global_position:
 		is_moving = false
@@ -37,9 +37,13 @@ func move(direction: Vector2):
 		 current_tile.x + direction.x,
 		current_tile.y + direction.y
 	)
+	
 	var tile_data: TileData = tile_map.get_cell_tile_data(0, target_tile)
-
-	if tile_data.get_custom_data("walkable") == false:
+	var tile_data2: TileData = tile_map.get_cell_tile_data(1, target_tile)
+	if tile_data2 != null:
+		if not tile_data2.get_custom_data("walkable"):
+			return
+	if not tile_data.get_custom_data("walkable"):
 		return
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
