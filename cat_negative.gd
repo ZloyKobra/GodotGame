@@ -7,24 +7,21 @@ var is_moving = false
 
 func _init():
 	self.visible = false
-	
+
 func _physics_process(delta):
 	if is_moving == false:
 		return
 	if global_position == sprite_2d.global_position:
 		is_moving = false
 		return
-	
+	if not self.visible:
+		return
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 3)
-	
+
 func _process(delta):
-	#print(is_moving, "   ", self.visible, "  cat_2")
 	if is_moving:
 		return
-	if Input.is_action_just_pressed("Switch_condition"):
-		print("\n\n\n\n  switch cat 2\n\n\n\n")
-		self.visible = not self.visible
-	elif Input.is_action_just_pressed("left"):
+	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
 	elif Input.is_action_just_pressed("right"):
 		move(Vector2.RIGHT)
@@ -34,7 +31,6 @@ func _process(delta):
 		move(Vector2.DOWN)
 	if is_moving:
 		return
-
 
 func move(direction: Vector2):
 	if is_moving:
@@ -47,10 +43,9 @@ func move(direction: Vector2):
 		current_tile.y + direction.y
 	)
 	var tile_data: TileData = tile_map.get_cell_tile_data(0, target_tile)
-	
+
 	if tile_data.get_custom_data("walkable") == false:
 		return
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
-	
