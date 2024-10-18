@@ -2,10 +2,12 @@ extends Sprite2D
 
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $"Sprite2D"
-var is_moving = false
 var visible_ = true
+var is_moving = false
 
-
+func _init():
+	self.visible = false
+	
 func _physics_process(delta):
 	if is_moving == false:
 		return
@@ -16,7 +18,7 @@ func _physics_process(delta):
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1)
 	
 func _process(delta):
-	print(is_moving, "   ", self.visible, "  cat_1")
+	print(is_moving, "   ", self.visible, "  cat_2")
 	if is_moving:
 		return
 	if Input.is_action_just_pressed("left"):
@@ -27,7 +29,7 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	elif Input.is_action_just_pressed("Switch_condition") and not is_moving:
+	elif Input.is_action_just_pressed("Switch_condition"):
 		self.visible = not self.visible
 
 func move(direction: Vector2):
