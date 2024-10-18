@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyitjlfcvpm6k"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_wamm6"]
+[ext_resource type="Texture2D" uid="uid://x7ffokbx2u5c" path="res://assets/images/tayly_5.png" id="2_xm8u2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37m74"]
+atlas = ExtResource("2_xm8u2")
+region = Rect2(60, 0, 20, 20)
+
+[node name="cat_normal" type="Sprite2D"]
+position = Vector2(30, 31)
+script = ExtResource("1_wamm6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+texture = SubResource("AtlasTexture_37m74")
