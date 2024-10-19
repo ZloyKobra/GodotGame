@@ -13,6 +13,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("enter"):
 		if self.visible:
 			if (global_position == cat_normal.global_position and cat_normal.visible) or (self.global_position == cat_negative.global_position and cat_negative.visible):
+				$"../lever_sound".play()
 				offSprite.visible = not offSprite.visible
 				onSprite.visible = not onSprite.visible
 				is_on = not is_on
