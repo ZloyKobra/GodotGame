@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dqs21evwgcnoj" path="res://assets/images/tilemap_packed.png" id="1_82kyr"]
 [ext_resource type="Texture2D" uid="uid://ccn6kbn17iv0k" path="res://assets/images/brown_box.png" id="2_b8lxb"]
-[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://objects/tayly_9.png" id="3_cgbnb"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://assets/images/tayly_9.png" id="3_cgbnb"]
 [ext_resource type="Script" path="res://tile_map.gd" id="4_fwjxi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iy71u"]

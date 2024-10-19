@@ -3,6 +3,8 @@ extends TileMap
 @onready var normal_cat = $"../cat_normal"
 @onready var negative_cat = $"../cat_negative"
 @onready var win_sprite = $"../ShefWin"
+@onready var green_box = $"../GreenBox"
+@onready var blue_box = $"../BlueBox"
 
 
 
