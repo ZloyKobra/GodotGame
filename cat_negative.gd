@@ -3,23 +3,24 @@ extends Sprite2D
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $"Sprite2D"
 var visible_ = true
-var is_moving = false
+var states = ['on_the_move', 'to_stand']
+var state = states[1]
 
 func _init():
 	self.visible = false
 	
 func _physics_process(delta):
-	if is_moving == false:
+	if state == states[1]:
 		return
 	if global_position == sprite_2d.global_position:
-		is_moving = false
+		state = states[1]
 		return
 	
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1)
 	
 func _process(delta):
-	print(is_moving, "   ", self.visible, "  cat_2")
-	if is_moving:
+	print(state, "   ", self.visible, "  cat_2")
+	if state == states[0]:
 		return
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
@@ -29,7 +30,9 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	elif Input.is_action_just_pressed("Switch_condition"):
+	if state == states[0]:
+		return
+	elif Input.is_action_just_pressed("Switch_condition") and state == states[1]:
 		self.visible = not self.visible
 
 func move(direction: Vector2):
@@ -44,7 +47,7 @@ func move(direction: Vector2):
 	
 	if tile_data.get_custom_data("walkable") == false:
 		return
-	is_moving = true
+	state = states[0]
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
 	

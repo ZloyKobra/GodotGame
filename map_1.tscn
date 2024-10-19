@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4vpgwurbbix3"]
+[gd_scene load_steps=12 format=3 uid="uid://bh1pjhm22tmc6"]
 
-[ext_resource type="Texture2D" uid="uid://dqs21evwgcnoj" path="res://assets/images/tilemap_packed.png" id="1_kc782"]
-[ext_resource type="Script" path="res://player/player.gd" id="2_mspwq"]
-[ext_resource type="Texture2D" uid="uid://ccn6kbn17iv0k" path="res://assets/images/brown_box.png" id="2_ua133"]
-[ext_resource type="Texture2D" uid="uid://x7ffokbx2u5c" path="res://assets/images/tayly_5.png" id="3_pe5n4"]
-[ext_resource type="Script" path="res://cat_negative.gd" id="5_4agbb"]
+[ext_resource type="Texture2D" uid="uid://dqs21evwgcnoj" path="res://assets/images/tilemap_packed.png" id="1_602jo"]
+[ext_resource type="Texture2D" uid="uid://ccn6kbn17iv0k" path="res://assets/images/brown_box.png" id="2_jaocr"]
+[ext_resource type="Texture2D" uid="uid://x7ffokbx2u5c" path="res://assets/images/tayly_5.png" id="3_tayn7"]
+[ext_resource type="Script" path="res://Objects/player/player.gd" id="4_ng42k"]
+[ext_resource type="Script" path="res://cat_negative.gd" id="5_k3h7f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iy71u"]
-texture = ExtResource("1_kc782")
+texture = ExtResource("1_602jo")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -150,7 +150,7 @@ texture = ExtResource("1_kc782")
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48r"]
-texture = ExtResource("2_ua133")
+texture = ExtResource("2_jaocr")
 texture_region_size = Vector2i(20, 20)
 0:0/0 = 0
 1:0/0 = 0
@@ -6119,7 +6119,7 @@ texture_region_size = Vector2i(20, 20)
 93:55/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouqap"]
-texture = ExtResource("3_pe5n4")
+texture = ExtResource("3_tayn7")
 texture_region_size = Vector2i(20, 20)
 0:0/0 = 0
 1:0/0 = 0
@@ -6177,14 +6177,15 @@ sources/1 = SubResource("TileSetAtlasSource_ht48r")
 sources/5 = SubResource("TileSetAtlasSource_ouqap")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37m74"]
-atlas = ExtResource("3_pe5n4")
+atlas = ExtResource("3_tayn7")
 region = Rect2(60, 0, 20, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyh3s"]
-atlas = ExtResource("3_pe5n4")
+atlas = ExtResource("3_tayn7")
 region = Rect2(60, 20, 20, 20)
 
-[node name="world" type="Node2D"]
+[node name="Map1" type="CanvasLayer"]
+visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7t8m3")
@@ -6193,7 +6194,7 @@ layer_0/tile_data = PackedInt32Array(65536, 5, 1, 131072, 5, 1, 196608, 5, 1, 26
 
 [node name="cat_normal" type="Sprite2D" parent="."]
 position = Vector2(30, 31)
-script = ExtResource("2_mspwq")
+script = ExtResource("4_ng42k")
 
 [node name="Sprite2D" type="Sprite2D" parent="cat_normal"]
 texture_filter = 3
@@ -6201,7 +6202,8 @@ texture = SubResource("AtlasTexture_37m74")
 
 [node name="cat_negative" type="Sprite2D" parent="."]
 position = Vector2(30, 31)
-script = ExtResource("5_4agbb")
+script = ExtResource("5_k3h7f")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="cat_negative"]
 texture_filter = 1
