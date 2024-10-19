@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bep1epyt86hew"]
 
-[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://objects/tayly_9.png" id="1_kbll8"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://assets/images/tayly_9.png" id="1_kbll8"]
 [ext_resource type="Script" path="res://tile_map_negative.gd" id="2_qyt6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03c0c"]

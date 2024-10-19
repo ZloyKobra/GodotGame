@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4vpgwurbbix3"]
+[gd_scene load_steps=11 format=3 uid="uid://b4vpgwurbbix3"]
 
 [ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="1_5nj7i"]
 [ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="2_1uxlr"]
@@ -6,16 +6,24 @@
 [ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="3_ucrb4"]
 [ext_resource type="PackedScene" uid="uid://bd6ul8k706r1v" path="res://player/cat_negative.tscn" id="5_bojo3"]
 [ext_resource type="PackedScene" uid="uid://d0h0ttjsrp8j1" path="res://objects/lever_blue.tscn" id="5_x8mq8"]
+[ext_resource type="PackedScene" uid="uid://ddkg17xgqtiai" path="res://objects/green_box.tscn" id="6_g46ss"]
+[ext_resource type="PackedScene" uid="uid://bqi5sn07mnttn" path="res://objects/blue_box.tscn" id="7_fq3pv"]
+[ext_resource type="PackedScene" uid="uid://cfmu18nu7ckoj" path="res://objects/box.tscn" id="8_okmpw"]
 [ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="8_uadkh"]
 
 [node name="world" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_5nj7i")]
+layer_0/y_sort_origin = -4
+layer_1/y_sort_origin = -3
 layer_1/tile_data = PackedInt32Array(65545, 393219, 0, 131081, 393219, 0, 196617, 393219, 0, 262153, 393219, 0, 327689, 393219, 0, 393225, 393219, 0, 458761, 393219, 0, 524297, 393219, 0, 589833, 393219, 0, 655369, 393219, 0)
+layer_2/y_sort_origin = -2
 layer_2/tile_data = PackedInt32Array(65544, 65539, 6)
 
 [node name="TileMap_negative" parent="." instance=ExtResource("3_ucrb4")]
-visible = false
+layer_0/y_sort_origin = -4
+layer_1/y_sort_origin = -3
+layer_2/y_sort_origin = -3
 layer_2/tile_data = PackedInt32Array(65544, 65536, 6)
 
 [node name="lever_green" parent="." instance=ExtResource("2_1uxlr")]
@@ -23,6 +31,17 @@ position = Vector2(50, 70)
 
 [node name="lever_blue" parent="." instance=ExtResource("5_x8mq8")]
 position = Vector2(230, 130)
+
+[node name="Box" parent="." instance=ExtResource("8_okmpw")]
+light_mask = 771
+visibility_layer = 897
+position = Vector2(110, 170)
+
+[node name="GreenBox" parent="." instance=ExtResource("6_g46ss")]
+position = Vector2(250, 170)
+
+[node name="BlueBox" parent="." instance=ExtResource("7_fq3pv")]
+position = Vector2(130, 70)
 
 [node name="cat_negative" parent="." instance=ExtResource("5_bojo3")]
 position = Vector2(30, 31)
@@ -32,8 +51,8 @@ position = Vector2(291, 91)
 
 [node name="ShefWin" type="Sprite2D" parent="."]
 visible = false
-light_mask = 15
-visibility_layer = 15
+light_mask = 799
+visibility_layer = 799
 position = Vector2(189, 118.5)
 scale = Vector2(0.625828, 0.691176)
 texture = ExtResource("8_uadkh")
