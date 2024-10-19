@@ -15,8 +15,10 @@ region = Rect2(80, 140, 20, 20)
 script = ExtResource("1_hn1vf")
 
 [node name="offSprite" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = SubResource("AtlasTexture_1y8mp")
 
 [node name="onSprite" type="Sprite2D" parent="."]
 visible = false
+texture_filter = 1
 texture = SubResource("AtlasTexture_ocvgv")
