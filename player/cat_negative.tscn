@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bd6ul8k706r1v"]
 
-[ext_resource type="Script" path="res://cat_negative.gd" id="1_qb6um"]
-[ext_resource type="Texture2D" uid="uid://x7ffokbx2u5c" path="res://assets/images/tayly_5.png" id="2_efk2s"]
+[ext_resource type="Script" path="res://player/cat_negative.gd" id="1_qb6um"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://assets/images/tayly_9.png" id="2_1shiq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyh3s"]
-atlas = ExtResource("2_efk2s")
+atlas = ExtResource("2_1shiq")
 region = Rect2(60, 20, 20, 20)
 
 [node name="cat_negative" type="Sprite2D"]
