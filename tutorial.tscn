@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://myfwamv002vq"]
+
+[ext_resource type="Texture2D" uid="uid://356qs3vbh8rc" path="res://fon_340kh200.png" id="1_7olpi"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 240.0
+texture = ExtResource("1_7olpi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 76.0
+offset_bottom = 50.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Туториал:"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "WASD - управление
+SPACE - смена кота(состояния)
+F - взаимодействие"

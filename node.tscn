@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://fev1tlqvgq5t"]
+
+[ext_resource type="Script" path="res://node.gd" id="1_0rve7"]
+[ext_resource type="PackedScene" uid="uid://csh3vo3mmsq6d" path="res://menu.tscn" id="2_w0nr7"]
+[ext_resource type="PackedScene" uid="uid://b4vpgwurbbix3" path="res://world.tscn" id="3_1quul"]
+[ext_resource type="PackedScene" uid="uid://nu4sdvkx6sba" path="res://options.tscn" id="4_mt8vl"]
+[ext_resource type="PackedScene" uid="uid://dp6tt1fw86y0q" path="res://levels.tscn" id="5_rpfh0"]
+[ext_resource type="AudioStream" uid="uid://7r13my63if73" path="res://Sounds/background_music.mp3" id="6_tm10f"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_0rve7")
+
+[node name="world" parent="." instance=ExtResource("3_1quul")]
+
+[node name="options" parent="." instance=ExtResource("4_mt8vl")]
+
+[node name="Levels" parent="." instance=ExtResource("5_rpfh0")]
+
+[node name="Menu" parent="." instance=ExtResource("2_w0nr7")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tm10f")
+autoplay = true
+parameters/looping = true

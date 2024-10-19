@@ -1,0 +1,61 @@
+[gd_scene load_steps=13 format=3 uid="uid://dhes8cydewryl"]
+
+[ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="1_5bgqh"]
+[ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="2_3deir"]
+[ext_resource type="PackedScene" uid="uid://cfmu18nu7ckoj" path="res://objects/box.tscn" id="3_882tl"]
+[ext_resource type="PackedScene" uid="uid://bqi5sn07mnttn" path="res://objects/blue_box.tscn" id="4_rug0e"]
+[ext_resource type="PackedScene" uid="uid://ddkg17xgqtiai" path="res://objects/green_box.tscn" id="5_uxgkl"]
+[ext_resource type="PackedScene" uid="uid://d0h0ttjsrp8j1" path="res://objects/lever_blue.tscn" id="6_ob7w6"]
+[ext_resource type="PackedScene" uid="uid://buy7s0rwg83sx" path="res://objects/button.tscn" id="7_lbp5i"]
+[ext_resource type="PackedScene" uid="uid://dtcu067r81edg" path="res://objects/level_red.tscn" id="8_k8ddy"]
+[ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="8_rwd84"]
+[ext_resource type="PackedScene" uid="uid://bd6ul8k706r1v" path="res://player/cat_negative.tscn" id="9_7yvk3"]
+[ext_resource type="PackedScene" uid="uid://bbbebslfshtoi" path="res://objects/lever_yellow.tscn" id="9_lukqt"]
+[ext_resource type="PackedScene" uid="uid://dyitjlfcvpm6k" path="res://player/cat_normal.tscn" id="10_1a281"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap_negative" parent="." instance=ExtResource("1_5bgqh")]
+layer_1/tile_data = PackedInt32Array(262146, 589824, 0, 196611, 589824, 1610612736, 327684, 589824, 1610612736, 131077, 589824, 805306368, 196613, 589824, 805306368, 262149, 589824, 805306368, 393221, 589824, 805306368, 589829, 589824, 805306368, 589828, 589824, 1342177280, 589827, 589824, 1342177280)
+layer_2/tile_data = PackedInt32Array(196610, 262144, 3, 65541, 262144, 3, 131079, 262144, 3, 131081, 262144, 3, 131083, 262144, 3, 65547, 262144, 3, 196621, 262144, 3, 131085, 262144, 3, 131086, 262144, 3, 131087, 262144, 3, 196623, 262144, 3, 262159, 262144, 3, 458767, 262144, 3, 524297, 262144, 3, 589833, 262144, 3, 589834, 262144, 3, 655370, 262144, 3, 589835, 262144, 3, 589836, 262144, 3, 589837, 262144, 3, 524301, 262144, 3, 458765, 262144, 3, 458764, 262144, 3, 458763, 262144, 3, 327691, 262144, 3, 327689, 262144, 3, 327685, 262144, 3, 327686, 262144, 3, 327687, 262144, 3, 393223, 262144, 3, 458759, 262144, 3, 458758, 262144, 3, 458757, 262144, 3, 589829, 262144, 3, 655367, 262144, 3, 589826, 262144, 3, 458753, 262144, 3, 393219, 262144, 3, 327683, 262144, 3, 327682, 262144, 3, 589840, 262144, 1610612738, 589841, 262144, 1610612738, 524300, 65536, 6)
+layer_3/tile_data = PackedInt32Array(524299, 393216, 6)
+layer_4/tile_data = PackedInt32Array(262158, 458752, 1610612742, 262157, 458752, 1610612744, 589831, 589824, 8)
+layer_5/tile_data = PackedInt32Array(589832, 589824, 7, 589831, 589824, 8)
+
+[node name="TileMap" parent="." instance=ExtResource("2_3deir")]
+layer_1/tile_data = PackedInt32Array(131080, 524291, 1610612736, 196617, 524291, 805306368, 262153, 524291, 805306368, 327690, 524291, 1342177280, 393227, 524291, 0, 458766, 524291, 1610612736, 327695, 524291, 805306368, 393231, 524291, 805306368)
+layer_2/tile_data = PackedInt32Array(196610, 262147, 3, 327682, 262147, 3, 327683, 262147, 3, 393219, 262147, 3, 327685, 262147, 3, 327686, 262147, 3, 327687, 262147, 3, 393223, 262147, 3, 458759, 262147, 3, 458757, 262147, 3, 458758, 262147, 3, 65541, 262147, 3, 589829, 262147, 3, 589826, 262147, 3, 458753, 262147, 3, 655367, 262147, 3, 589833, 262147, 3, 524297, 262147, 3, 589834, 262147, 3, 655370, 262147, 3, 589835, 262147, 3, 589836, 262147, 3, 589837, 262147, 3, 524301, 262147, 3, 458765, 262147, 3, 458764, 262147, 3, 458763, 262147, 3, 327691, 262147, 3, 327689, 262147, 3, 131081, 262147, 3, 131079, 262147, 3, 131083, 262147, 3, 65547, 262147, 3, 196621, 262147, 3, 131085, 262147, 3, 131086, 262147, 3, 131087, 262147, 3, 196623, 262147, 3, 262159, 262147, 3, 458767, 262147, 3, 589841, 262147, 1610612738, 589840, 262147, 1610612738, 524300, 65539, 6)
+layer_3/tile_data = PackedInt32Array(524299, 393219, 6)
+layer_4/tile_data = PackedInt32Array(262158, 458755, 1610612742, 262157, 458755, 1610612744)
+layer_5/tile_data = PackedInt32Array(589832, 589827, 7, 589831, 589827, 8)
+
+[node name="Box" parent="." instance=ExtResource("3_882tl")]
+position = Vector2(330, 110)
+
+[node name="BlueBox" parent="." instance=ExtResource("4_rug0e")]
+position = Vector2(116, -13)
+
+[node name="GreenBox" parent="." instance=ExtResource("5_uxgkl")]
+position = Vector2(90, -10)
+
+[node name="lever_blue" parent="." instance=ExtResource("6_ob7w6")]
+position = Vector2(67, -12)
+
+[node name="Button" parent="." instance=ExtResource("7_lbp5i")]
+texture_filter = 1
+position = Vector2(290, 70)
+
+[node name="lever_red" parent="." instance=ExtResource("8_k8ddy")]
+position = Vector2(190, 210)
+
+[node name="lever_yellow" parent="." instance=ExtResource("9_lukqt")]
+position = Vector2(130, 130)
+
+[node name="lever_green" parent="." instance=ExtResource("8_rwd84")]
+position = Vector2(30, -13)
+
+[node name="cat_negative" parent="." instance=ExtResource("9_7yvk3")]
+position = Vector2(30, 30)
+
+[node name="cat_normal" parent="." instance=ExtResource("10_1a281")]
+position = Vector2(330, 210)
