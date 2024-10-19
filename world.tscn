@@ -30,15 +30,6 @@ position = Vector2(30, 31)
 [node name="cat_normal" parent="." instance=ExtResource("2_xind8")]
 position = Vector2(291, 91)
 
-<<<<<<< HEAD
-[node name="cat_negative" type="Sprite2D" parent="."]
-position = Vector2(30, 31)
-script = ExtResource("5_4agbb")
-
-[node name="Sprite2D" type="Sprite2D" parent="cat_negative"]
-texture_filter = 1
-texture = SubResource("AtlasTexture_jyh3s")
-=======
 [node name="ShefWin" type="Sprite2D" parent="."]
 visible = false
 light_mask = 15
@@ -46,4 +37,3 @@ visibility_layer = 15
 position = Vector2(189, 118.5)
 scale = Vector2(0.625828, 0.691176)
 texture = ExtResource("8_uadkh")
->>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0
