@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhs2yg2xghpxb"
-path="res://.godot/imported/tayly_9.png-2b5d2065588ef20ca6d4946715062bb2.ctex"
+uid="uid://b1ri7kvsyrqpp"
+path="res://.godot/imported/shef_win.jpg-2098f1f04b85e719a74703989821b7c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tayly_9.png"
-dest_files=["res://.godot/imported/tayly_9.png-2b5d2065588ef20ca6d4946715062bb2.ctex"]
+source_file="res://assets/images/shef_win.jpg"
+dest_files=["res://.godot/imported/shef_win.jpg-2098f1f04b85e719a74703989821b7c7.ctex"]
 
 [params]
 
