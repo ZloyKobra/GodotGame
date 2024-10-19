@@ -2,7 +2,6 @@ extends Sprite2D
 
 @onready var tile_map = $"../TileMap_negative"
 @onready var sprite_2d = $"Sprite2D"
-
 @onready var lever = $"../lever_blue"
 var is_moving = false
 var is_on_exit = false
@@ -14,6 +13,7 @@ func _physics_process(delta):
 	if not is_moving:
 		return
 	if global_position == sprite_2d.global_position:
+		is_moving = false
 		return
 	if not self.visible:
 		return
@@ -57,5 +57,6 @@ func move(direction: Vector2):
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return
+	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
