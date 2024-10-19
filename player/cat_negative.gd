@@ -61,6 +61,8 @@ func move(direction: Vector2):
 		var far_tile_data2: TileData = tile_map.get_cell_tile_data(2, far_traget_tile)
 		
 		if far_tile_data2 != null:
+			if tile_data2.get_custom_data("wall"):
+				print("sakldsakld")
 			if far_tile_data2.get_custom_data("exit"):
 				is_on_exit = true
 			else:
@@ -82,13 +84,16 @@ func move(direction: Vector2):
 				blue_box.move(direction)
 		
 	if tile_data2 != null:
+		if tile_data2.get_custom_data("wall"):
+			print("sakldsakld;")
+			return
 		if tile_data2.get_custom_data("exit"):
 			is_on_exit = true
 		else:
 			is_on_exit = false
 			
 	if tile_data1 != null:
-		if not tile_data1.get_custom_data("wall") and not lever.is_on:
+		if tile_data1.get_custom_data("wall") and not lever.is_on:
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return

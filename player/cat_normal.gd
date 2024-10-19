@@ -79,19 +79,21 @@ func move(direction: Vector2):
 				green_box.move(direction)
 		
 	if tile_data2 != null:
+		if tile_data2.get_custom_data("wall"):
+			print("sakldsakld;")
+			return
 		if tile_data2.get_custom_data("exit"):
 			is_on_exit = true
 		else:
 			is_on_exit = false
 			
 	if tile_data1 != null:
-		if not tile_data1.get_custom_data("wall") and not lever.is_on:
+		if tile_data1.get_custom_data("wall") and not lever.is_on:
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return
 	if tile_map.map_to_local(target_tile) == blue_box.global_position:
 		return
-
 	is_moving = true
 	print("ME!ME!ME!   ", global_position)
 	print("BOX!BOX!BOX!  ", box.global_position)
