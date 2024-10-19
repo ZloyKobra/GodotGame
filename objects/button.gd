@@ -2,7 +2,8 @@ extends Sprite2D
 
 @onready var cat_negative = $"../cat_negative"
 @onready var cat_normal = $"../cat_normal"
-@onready var tile_map = $"../TileMap"
+@onready var tile_map = $"../TileMap_negative"
+@onready var tile_map_alt = $"../TileMap"
 @onready var offSprite = $offSprite
 @onready var onSprite = $onSprite
 @onready var box = $"../Box"
@@ -23,4 +24,5 @@ func _process(delta):
 		onSprite.visible = not onSprite.visible
 		is_on = not is_on
 		was_on = true
-		print("i'm on")
+		tile_map.set_layer_enabled(5, not is_on)
+		tile_map_alt.set_layer_enabled(5, not is_on)
