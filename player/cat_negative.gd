@@ -6,17 +6,14 @@ extends Sprite2D
 @onready var lever = $"../lever_blue"
 var is_moving = false
 var is_on_exit = false
->>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 
 func _init():
 	self.visible = false
 
 func _physics_process(delta):
 	if not is_moving:
->>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 		return
 	if global_position == sprite_2d.global_position:
-		state = states[1]
 		return
 	if not self.visible:
 		return
@@ -24,7 +21,6 @@ func _physics_process(delta):
 
 func _process(delta):
 	if is_moving:
->>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 		return
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
@@ -62,6 +58,5 @@ func move(direction: Vector2):
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return
-	state = states[0]
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
