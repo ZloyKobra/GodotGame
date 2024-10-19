@@ -11,7 +11,6 @@ func _physics_process(delta):
 	if not is_moving:
 		return
 	if global_position == sprite_2d.global_position:
-		state = states[1]
 		return
 	if not self.visible:
 		return
@@ -56,6 +55,5 @@ func move(direction: Vector2):
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return
-	state = states[0]
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
