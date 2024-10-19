@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddkg17xgqtiai"]
+
+[ext_resource type="Script" path="res://objects/green_box.gd" id="1_65fp1"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://assets/images/tayly_9.png" id="2_5447q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urky0"]
+atlas = ExtResource("2_5447q")
+region = Rect2(60, 60, 20, 20)
+
+[node name="GreenBox" type="Sprite2D"]
+script = ExtResource("1_65fp1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_urky0")

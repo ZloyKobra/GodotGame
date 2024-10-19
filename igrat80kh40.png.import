@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhs2yg2xghpxb"
-path="res://.godot/imported/tayly_9.png-30d10979c3462ca1d84edc1536186585.ctex"
+uid="uid://nuj0vyipqxak"
+path="res://.godot/imported/igrat80kh40.png-9952bf13f3fe8e06f8eeb830a3878338.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/tayly_9.png"
-dest_files=["res://.godot/imported/tayly_9.png-30d10979c3462ca1d84edc1536186585.ctex"]
+source_file="res://igrat80kh40.png"
+dest_files=["res://.godot/imported/igrat80kh40.png-9952bf13f3fe8e06f8eeb830a3878338.ctex"]
 
 [params]
 

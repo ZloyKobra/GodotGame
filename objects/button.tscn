@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://buy7s0rwg83sx"]
+
+[ext_resource type="Script" path="res://objects/button.gd" id="1_hn1vf"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://assets/images/tayly_9.png" id="2_0gvjy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y8mp"]
+atlas = ExtResource("2_0gvjy")
+region = Rect2(80, 120, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocvgv"]
+atlas = ExtResource("2_0gvjy")
+region = Rect2(80, 140, 20, 20)
+
+[node name="Button" type="Sprite2D"]
+script = ExtResource("1_hn1vf")
+
+[node name="offSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_1y8mp")
+
+[node name="onSprite" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_ocvgv")

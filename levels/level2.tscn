@@ -1,0 +1,81 @@
+[gd_scene load_steps=18 format=3 uid="uid://d3jytnpal8c25"]
+
+[ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="1_5bgqh"]
+[ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="2_3deir"]
+[ext_resource type="PackedScene" uid="uid://cfmu18nu7ckoj" path="res://objects/box.tscn" id="3_882tl"]
+[ext_resource type="PackedScene" uid="uid://bqi5sn07mnttn" path="res://objects/blue_box.tscn" id="4_rug0e"]
+[ext_resource type="PackedScene" uid="uid://ddkg17xgqtiai" path="res://objects/green_box.tscn" id="5_uxgkl"]
+[ext_resource type="PackedScene" uid="uid://d0h0ttjsrp8j1" path="res://objects/lever_blue.tscn" id="6_ob7w6"]
+[ext_resource type="PackedScene" uid="uid://buy7s0rwg83sx" path="res://objects/button.tscn" id="7_lbp5i"]
+[ext_resource type="PackedScene" uid="uid://dtcu067r81edg" path="res://objects/level_red.tscn" id="8_k8ddy"]
+[ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="8_rwd84"]
+[ext_resource type="PackedScene" uid="uid://bd6ul8k706r1v" path="res://player/cat_negative.tscn" id="9_7yvk3"]
+[ext_resource type="PackedScene" uid="uid://bbbebslfshtoi" path="res://objects/lever_yellow.tscn" id="9_lukqt"]
+[ext_resource type="PackedScene" uid="uid://dyitjlfcvpm6k" path="res://player/cat_normal.tscn" id="10_1a281"]
+[ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="13_ton5p"]
+[ext_resource type="AudioStream" uid="uid://mir3wwxwa73v" path="res://assets/sounds/level_pull.mp3" id="14_cmbpq"]
+[ext_resource type="AudioStream" uid="uid://ddyasci5dqnlr" path="res://assets/sounds/step.wav" id="15_y0ri7"]
+[ext_resource type="AudioStream" uid="uid://bwjvp3ilm01no" path="res://assets/sounds/swap.mp3" id="16_yssd4"]
+[ext_resource type="AudioStream" uid="uid://coileho5n6nfq" path="res://assets/sounds/level_end.mp3" id="17_3jfss"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("2_3deir")]
+layer_1/tile_data = PackedInt32Array(393222, 524291, 1, 393223, 524291, 1, 393224, 524291, 1, 393225, 524291, 1, 393226, 524291, 1, 393227, 524291, 1, 393228, 524291, 1, 393229, 524291, 1, 393230, 524291, 1, 393231, 524291, 1, 393232, 524291, 1, 393233, 524291, 1)
+layer_2/tile_data = PackedInt32Array(393219, 262147, 3, 393220, 262147, 3, 393221, 262147, 3, 65538, 262147, 3, 131074, 262147, 3, 196610, 262147, 3, 262146, 262147, 3, 196609, 65539, 6, 262149, 589827, 6, 196613, 589827, 6, 131077, 589827, 6, 65541, 589827, 6, 393218, 720899, 805306376, 393217, 589827, 7)
+layer_4/tile_data = PackedInt32Array(458757, 458755, 6, 524293, 458755, 6, 589829, 458755, 6, 655365, 458755, 6)
+layer_5/tile_data = PackedInt32Array(327685, 589827, 6, 65541, 589827, 6, 131077, 589827, 6, 196613, 589827, 6, 262149, 589827, 6, 327682, 589827, 6)
+
+[node name="TileMap_negative" parent="." instance=ExtResource("1_5bgqh")]
+layer_0/tile_data = PackedInt32Array(0, 0, 3, 65536, 0, 4, 131072, 0, 4, 196608, 0, 4, 262144, 0, 4, 327680, 0, 4, 393216, 0, 4, 458752, 0, 4, 524288, 0, 4, 589824, 0, 4, 655360, 0, 4, 720896, 0, 5, 1, 65536, 3, 65537, 65536, 4, 131073, 65536, 4, 196609, 65536, 4, 262145, 65536, 4, 327681, 65536, 4, 393217, 65536, 4, 458753, 65536, 4, 524289, 65536, 4, 589825, 65536, 4, 655361, 65536, 4, 720897, 65536, 5, 2, 65536, 3, 65538, 65536, 4, 131074, 65536, 4, 196610, 65536, 4, 262146, 65536, 4, 327682, 65536, 4, 393218, 65536, 4, 458754, 65536, 4, 524290, 65536, 4, 589826, 65536, 4, 655362, 65536, 4, 720898, 65536, 5, 3, 65536, 3, 65539, 65536, 4, 131075, 65536, 4, 196611, 65536, 4, 262147, 65536, 4, 327683, 65536, 4, 393219, 65536, 4, 458755, 65536, 4, 524291, 65536, 4, 589827, 65536, 4, 655363, 65536, 4, 720899, 65536, 5, 4, 65536, 3, 65540, 65536, 4, 131076, 65536, 4, 196612, 65536, 4, 262148, 65536, 4, 327684, 65536, 4, 393220, 65536, 4, 458756, 65536, 4, 524292, 65536, 4, 589828, 65536, 4, 655364, 65536, 4, 720900, 65536, 5, 5, 65536, 3, 65541, 65536, 4, 131077, 65536, 4, 196613, 65536, 4, 262149, 65536, 4, 327685, 65536, 4, 393221, 65536, 4, 458757, 65536, 4, 524293, 65536, 4, 589829, 65536, 4, 655365, 65536, 4, 720901, 65536, 5, 6, 65536, 3, 65542, 65536, 4, 131078, 65536, 4, 196614, 65536, 4, 262150, 65536, 4, 327686, 65536, 4, 393222, 65536, 4, 458758, 65536, 4, 524294, 65536, 4, 589830, 65536, 4, 655366, 65536, 4, 720902, 65536, 5, 7, 65536, 3, 65543, 65536, 4, 131079, 65536, 4, 196615, 65536, 4, 262151, 65536, 4, 327687, 65536, 4, 393223, 65536, 4, 458759, 65536, 4, 524295, 65536, 4, 589831, 65536, 4, 655367, 65536, 4, 720903, 65536, 5, 8, 65536, 3, 65544, 65536, 4, 131080, 65536, 4, 196616, 65536, 4, 262152, 65536, 4, 327688, 65536, 4, 393224, 65536, 4, 458760, 65536, 4, 524296, 65536, 4, 589832, 65536, 4, 655368, 65536, 4, 720904, 65536, 5, 9, 65536, 3, 65545, 65536, 4, 131081, 65536, 4, 196617, 65536, 4, 262153, 65536, 4, 327689, 65536, 4, 393225, 65536, 4, 458761, 65536, 4, 524297, 65536, 4, 589833, 65536, 4, 655369, 65536, 4, 720905, 65536, 5, 10, 65536, 3, 65546, 65536, 4, 131082, 65536, 4, 196618, 65536, 4, 262154, 65536, 4, 327690, 65536, 4, 393226, 65536, 4, 458762, 65536, 4, 524298, 65536, 4, 589834, 65536, 4, 655370, 65536, 4, 720906, 65536, 5, 11, 65536, 3, 65547, 65536, 4, 131083, 65536, 4, 196619, 65536, 4, 262155, 65536, 4, 327691, 65536, 4, 393227, 65536, 4, 458763, 65536, 4, 524299, 65536, 4, 589835, 65536, 4, 655371, 65536, 4, 720907, 65536, 5, 12, 65536, 3, 65548, 65536, 4, 131084, 65536, 4, 196620, 65536, 4, 262156, 65536, 4, 327692, 65536, 4, 393228, 65536, 4, 458764, 65536, 4, 524300, 65536, 4, 589836, 65536, 4, 655372, 65536, 4, 720908, 65536, 5, 65549, 65536, 4, 131085, 65536, 4, 196621, 65536, 4, 262157, 65536, 4, 327693, 65536, 4, 393229, 65536, 4, 458765, 65536, 4, 524301, 65536, 4, 589837, 65536, 4, 655373, 65536, 4, 65550, 65536, 4, 131086, 65536, 4, 196622, 65536, 4, 262158, 65536, 4, 327694, 65536, 4, 393230, 65536, 4, 458766, 65536, 4, 524302, 65536, 4, 589838, 65536, 4, 655374, 65536, 4, 65551, 65536, 4, 131087, 65536, 4, 196623, 65536, 4, 262159, 65536, 4, 327695, 65536, 4, 393231, 65536, 4, 458767, 65536, 4, 524303, 65536, 4, 589839, 65536, 4, 655375, 65536, 4, 65552, 65536, 4, 131088, 65536, 4, 196624, 65536, 4, 262160, 65536, 4, 327696, 65536, 4, 393232, 65536, 4, 458768, 65536, 4, 524304, 65536, 4, 589840, 65536, 4, 655376, 65536, 4, 65553, 65536, 4, 131089, 65536, 4, 196625, 65536, 4, 262161, 65536, 4, 327697, 65536, 4, 393233, 65536, 4, 458769, 65536, 4, 524305, 65536, 4, 589841, 65536, 4, 655377, 65536, 4, 13, 65536, 3, 14, 65536, 3, 15, 65536, 3, 16, 65536, 3, 17, 65536, 3, 720909, 65536, 5, 720910, 65536, 5, 720911, 65536, 5, 720912, 65536, 5, 720913, 65536, 5, 720914, 131072, 5, 65554, 131072, 4, 131090, 131072, 4, 196626, 131072, 4, 262162, 131072, 4, 327698, 131072, 4, 393234, 131072, 4, 458770, 131072, 4, 524306, 131072, 4, 589842, 131072, 4, 655378, 131072, 4, 18, 131072, 3, 524283, 655360, 1)
+layer_1/tile_data = PackedInt32Array(393217, 589824, 1610612736, 393218, 655360, 805306370)
+layer_2/tile_data = PackedInt32Array(65538, 262144, 3, 131074, 262144, 3, 196610, 262144, 3, 262146, 262144, 3, 393219, 262144, 3, 393220, 262144, 3, 393221, 262144, 3, 196609, 65536, 6, 262149, 589824, 6, 196613, 589824, 6, 131077, 589824, 6, 65541, 589824, 6, 327685, 589824, 6, 327682, 589824, 6)
+layer_4/tile_data = PackedInt32Array(458757, 458752, 6, 524293, 458752, 6, 589829, 458752, 6, 655365, 458752, 6)
+
+[node name="Button" parent="." instance=ExtResource("7_lbp5i")]
+position = Vector2(230, 190)
+
+[node name="BlueBox" parent="." instance=ExtResource("4_rug0e")]
+position = Vector2(190, 70)
+
+[node name="Box" parent="." instance=ExtResource("3_882tl")]
+position = Vector2(-28, -55)
+
+[node name="GreenBox" parent="." instance=ExtResource("5_uxgkl")]
+position = Vector2(153, -20)
+
+[node name="lever_red" parent="." instance=ExtResource("8_k8ddy")]
+position = Vector2(70, -19)
+
+[node name="lever_blue" parent="." instance=ExtResource("6_ob7w6")]
+position = Vector2(30, 110)
+
+[node name="lever_green" parent="." instance=ExtResource("8_rwd84")]
+position = Vector2(49, -34)
+
+[node name="lever_yellow" parent="." instance=ExtResource("9_lukqt")]
+position = Vector2(270, 70)
+
+[node name="cat_negative" parent="." instance=ExtResource("9_7yvk3")]
+position = Vector2(50, 190)
+
+[node name="cat_normal" parent="." instance=ExtResource("10_1a281")]
+position = Vector2(330, 50)
+
+[node name="ShefWin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(189, 120)
+scale = Vector2(0.629139, 0.7)
+texture = ExtResource("13_ton5p")
+
+[node name="lever_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_cmbpq")
+
+[node name="walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_y0ri7")
+
+[node name="swap_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_yssd4")
+
+[node name="win_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_3jfss")
