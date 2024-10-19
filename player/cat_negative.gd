@@ -2,11 +2,7 @@ extends Sprite2D
 
 @onready var tile_map = $"../TileMap_negative"
 @onready var sprite_2d = $"Sprite2D"
-<<<<<<< HEAD:cat_negative.gd
-var visible_ = true
-var states = ['on_the_move', 'to_stand']
-var state = states[1]
-=======
+
 @onready var lever = $"../lever_blue"
 var is_moving = false
 var is_on_exit = false
@@ -16,9 +12,6 @@ func _init():
 	self.visible = false
 
 func _physics_process(delta):
-<<<<<<< HEAD:cat_negative.gd
-	if state == states[1]:
-=======
 	if not is_moving:
 >>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 		return
@@ -30,10 +23,6 @@ func _physics_process(delta):
 	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 3)
 
 func _process(delta):
-<<<<<<< HEAD:cat_negative.gd
-	print(state, "   ", self.visible, "  cat_2")
-	if state == states[0]:
-=======
 	if is_moving:
 >>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 		return
@@ -45,12 +34,6 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-<<<<<<< HEAD:cat_negative.gd
-	if state == states[0]:
-		return
-	elif Input.is_action_just_pressed("Switch_condition") and state == states[1]:
-		self.visible = not self.visible
-=======
 >>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 
 func move(direction: Vector2):
