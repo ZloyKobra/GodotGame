@@ -10,7 +10,9 @@ extends TileMap
 
 func _process(delta):
 	if normal_cat.is_on_exit and negative_cat.is_on_exit:
-		win_sprite.visible = true
+		pass
+		#print(get_tree().current_scene.)
+		#get_tree().change_scene_to_file()
 	if Input.is_action_just_pressed("Switch_condition"):
 		self.visible = not self.visible
 		negative_cat.visible = not negative_cat.visible

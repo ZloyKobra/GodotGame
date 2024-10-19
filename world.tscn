@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4vpgwurbbix3"]
+[gd_scene load_steps=12 format=3 uid="uid://b4vpgwurbbix3"]
 
 [ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="1_5nj7i"]
 [ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="2_1uxlr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqi5sn07mnttn" path="res://objects/blue_box.tscn" id="7_fq3pv"]
 [ext_resource type="PackedScene" uid="uid://cfmu18nu7ckoj" path="res://objects/box.tscn" id="8_okmpw"]
 [ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="8_uadkh"]
+[ext_resource type="PackedScene" uid="uid://buy7s0rwg83sx" path="res://objects/button.tscn" id="11_6vkbl"]
 
 [node name="world" type="Node2D"]
 
@@ -31,6 +32,9 @@ position = Vector2(50, 70)
 
 [node name="lever_blue" parent="." instance=ExtResource("5_x8mq8")]
 position = Vector2(230, 130)
+
+[node name="Button" parent="." instance=ExtResource("11_6vkbl")]
+position = Vector2(130, 130)
 
 [node name="Box" parent="." instance=ExtResource("8_okmpw")]
 light_mask = 771
