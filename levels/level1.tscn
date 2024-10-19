@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://f2e6owqmufoj"]
+[gd_scene load_steps=15 format=3 uid="uid://f2e6owqmufoj"]
 
 [ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="1_su624"]
 [ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="2_8mycr"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="5_hdmws"]
 [ext_resource type="PackedScene" uid="uid://ddkg17xgqtiai" path="res://objects/green_box.tscn" id="6_3kgqj"]
 [ext_resource type="PackedScene" uid="uid://d0h0ttjsrp8j1" path="res://objects/lever_blue.tscn" id="6_ckusa"]
+[ext_resource type="AudioStream" uid="uid://mir3wwxwa73v" path="res://assets/sounds/level_pull.mp3" id="10_kfs5c"]
+[ext_resource type="AudioStream" uid="uid://ddyasci5dqnlr" path="res://assets/sounds/step.wav" id="11_xiwun"]
+[ext_resource type="AudioStream" uid="uid://bwjvp3ilm01no" path="res://assets/sounds/swap.mp3" id="12_yqcn7"]
+[ext_resource type="AudioStream" uid="uid://coileho5n6nfq" path="res://assets/sounds/level_end.mp3" id="13_3mm5t"]
+[ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="14_1k26y"]
 
 [node name="Level1" type="Node2D"]
 
@@ -41,3 +46,21 @@ position = Vector2(-102, 403)
 
 [node name="BlueBox" parent="." instance=ExtResource("4_5u4tl")]
 position = Vector2(-25, 257)
+
+[node name="lever_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_kfs5c")
+
+[node name="walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_xiwun")
+
+[node name="swap_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_yqcn7")
+
+[node name="win_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_3mm5t")
+
+[node name="ShefWin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(186, 119)
+scale = Vector2(0.652318, 0.694118)
+texture = ExtResource("14_1k26y")
