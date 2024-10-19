@@ -17,11 +17,13 @@ var is_on = false
 func _process(delta):
 	if not (global_position == box.global_position or global_position == blue_box.global_position or global_position == green_box.global_position):
 		was_on = false
+		offSprite.visible = true
+		onSprite.visible = false
 	if was_on:
 		return
 	if global_position == box.global_position or global_position == blue_box.global_position or global_position == green_box.global_position:
-		offSprite.visible = not offSprite.visible
-		onSprite.visible = not onSprite.visible
+		offSprite.visible = false
+		onSprite.visible = true
 		is_on = not is_on
 		was_on = true
 		tile_map.set_layer_enabled(5, not is_on)

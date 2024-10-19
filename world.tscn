@@ -25,7 +25,6 @@ layer_2/tile_data = PackedInt32Array(65544, 65539, 6)
 layer_3/tile_data = PackedInt32Array(589826, 393219, 7, 589827, 393219, 7, 589828, 393219, 7)
 layer_4/tile_data = PackedInt32Array(262149, 458755, 6, 327685, 458755, 6, 393221, 458755, 6)
 layer_5/name = "button layer"
-layer_5/z_index = 5
 layer_5/tile_data = PackedInt32Array(393231, 589827, 6, 458767, 589827, 6, 524303, 589827, 6, 589839, 589827, 6)
 
 [node name="TileMap_negative" parent="." instance=ExtResource("3_ucrb4")]
@@ -36,7 +35,6 @@ layer_2/tile_data = PackedInt32Array(65544, 65536, 6)
 layer_3/tile_data = PackedInt32Array(589826, 393216, 7, 589827, 393216, 7, 589828, 393216, 7)
 layer_4/tile_data = PackedInt32Array(-196616, 458752, 6, -262152, 458752, 6, -327689, 458752, 6, -393225, 458752, 6, -458761, 458752, 6, -524298, 458752, 6, -589834, 458752, 6, -655371, 458752, 6, -720907, 458752, 6, -786444, 458752, 6, -851980, 458752, 6, -917517, 458752, 6, 262149, 458752, 6, 327685, 458752, 6, 393221, 458752, 6)
 layer_5/name = "button layer"
-layer_5/z_index = 5
 layer_5/tile_data = PackedInt32Array(393231, 589824, 6, 458767, 589824, 6, 524303, 589824, 6, 589839, 589824, 6)
 
 [node name="lever_green" parent="." instance=ExtResource("2_1uxlr")]
