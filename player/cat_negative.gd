@@ -30,7 +30,6 @@ func _process(delta):
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
->>>>>>> bb0710cf9c257cfaabe81086712daf91a974c4c0:player/cat_negative.gd
 
 func move(direction: Vector2):
 	if is_moving:
