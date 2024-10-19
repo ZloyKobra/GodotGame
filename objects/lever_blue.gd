@@ -2,9 +2,9 @@ extends Sprite2D
 
 @onready var cat_negative = $"../cat_negative"
 @onready var cat_normal = $"../cat_normal"
-@onready var tile_map = $"../TileMap"
-@onready var offSprite = $"OffSprite"
-@onready var onSprite = $"OnSprite"
+@onready var tile_map = $"../TileMap_negative"
+@onready var offSprite = $"offSprite"
+@onready var onSprite = $"onSprite"
 
 var is_on = false
 

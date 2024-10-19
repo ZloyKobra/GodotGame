@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0h0ttjsrp8j1"]
+
+[ext_resource type="Script" path="res://objects/lever_blue.gd" id="1_cf0u6"]
+[ext_resource type="Texture2D" uid="uid://dhs2yg2xghpxb" path="res://objects/tayly_9.png" id="2_vgrdi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8m7k"]
+atlas = ExtResource("2_vgrdi")
+region = Rect2(100, 80, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdwgf"]
+atlas = ExtResource("2_vgrdi")
+region = Rect2(100, 100, 20, 20)
+
+[node name="Lever_blue" type="Sprite2D"]
+script = ExtResource("1_cf0u6")
+metadata/_edit_group_ = true
+
+[node name="offSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_d8m7k")
+
+[node name="onSprite" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_mdwgf")
