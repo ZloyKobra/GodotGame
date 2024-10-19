@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3jytnpal8c25"]
+[gd_scene load_steps=18 format=3 uid="uid://d3jytnpal8c25"]
 
 [ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="1_5bgqh"]
 [ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="2_3deir"]
@@ -12,6 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://bd6ul8k706r1v" path="res://player/cat_negative.tscn" id="9_7yvk3"]
 [ext_resource type="PackedScene" uid="uid://bbbebslfshtoi" path="res://objects/lever_yellow.tscn" id="9_lukqt"]
 [ext_resource type="PackedScene" uid="uid://dyitjlfcvpm6k" path="res://player/cat_normal.tscn" id="10_1a281"]
+[ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="13_ton5p"]
+[ext_resource type="AudioStream" uid="uid://mir3wwxwa73v" path="res://assets/sounds/level_pull.mp3" id="14_cmbpq"]
+[ext_resource type="AudioStream" uid="uid://ddyasci5dqnlr" path="res://assets/sounds/step.wav" id="15_y0ri7"]
+[ext_resource type="AudioStream" uid="uid://bwjvp3ilm01no" path="res://assets/sounds/swap.mp3" id="16_yssd4"]
+[ext_resource type="AudioStream" uid="uid://coileho5n6nfq" path="res://assets/sounds/level_end.mp3" id="17_3jfss"]
 
 [node name="Level2" type="Node2D"]
 
@@ -56,3 +61,21 @@ position = Vector2(50, 190)
 
 [node name="cat_normal" parent="." instance=ExtResource("10_1a281")]
 position = Vector2(330, 50)
+
+[node name="ShefWin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(189, 120)
+scale = Vector2(0.629139, 0.7)
+texture = ExtResource("13_ton5p")
+
+[node name="lever_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_cmbpq")
+
+[node name="walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_y0ri7")
+
+[node name="swap_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_yssd4")
+
+[node name="win_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_3jfss")

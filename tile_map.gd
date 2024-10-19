@@ -6,7 +6,10 @@ extends TileMap
 @onready var green_box = $"../GreenBox"
 @onready var blue_box = $"../BlueBox"
 
+
+
 var win_sound_played = false
+
 func _process(delta):
 	if normal_cat.is_on_exit and negative_cat.is_on_exit and not win_sound_played:
 		win_sprite.visible = true
