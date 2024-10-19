@@ -13,3 +13,5 @@ func _process(delta):
 		self.visible = not self.visible
 		negative_cat.visible = not negative_cat.visible
 		normal_cat.visible = not normal_cat.visible
+	elif Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://menu.tscn")

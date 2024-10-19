@@ -2,10 +2,10 @@ extends Sprite2D
 
 @onready var tile_map = $"../TileMap_negative"
 @onready var sprite_2d = $"Sprite2D"
-
 @onready var lever = $"../lever_blue"
 var is_moving = false
 var is_on_exit = false
+@onready var audio_stream_walking = $"walking"
 
 func _init():
 	self.visible = false
@@ -14,6 +14,7 @@ func _physics_process(delta):
 	if not is_moving:
 		return
 	if global_position == sprite_2d.global_position:
+		is_moving = false
 		return
 	if not self.visible:
 		return
@@ -23,12 +24,16 @@ func _process(delta):
 	if is_moving:
 		return
 	if Input.is_action_just_pressed("left"):
+		audio_stream_walking.play()
 		move(Vector2.LEFT)
 	elif Input.is_action_just_pressed("right"):
+		audio_stream_walking.play()
 		move(Vector2.RIGHT)
 	elif Input.is_action_just_pressed("up"):
+		audio_stream_walking.play()
 		move(Vector2.UP)
 	elif Input.is_action_just_pressed("down"):
+		audio_stream_walking.play()
 		move(Vector2.DOWN)
 
 func move(direction: Vector2):
@@ -57,5 +62,6 @@ func move(direction: Vector2):
 			return
 	if not tile_data0.get_custom_data("walkable"):
 		return
+	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)

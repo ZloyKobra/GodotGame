@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4vpgwurbbix3"]
+[gd_scene load_steps=10 format=3 uid="uid://b4vpgwurbbix3"]
 
 [ext_resource type="PackedScene" uid="uid://o281pfk2pojj" path="res://TilleMaps/tile_map.tscn" id="1_5nj7i"]
 [ext_resource type="PackedScene" uid="uid://dkw7mxj3umifa" path="res://objects/lever_green.tscn" id="2_1uxlr"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bep1epyt86hew" path="res://TilleMaps/tile_map_negative.tscn" id="3_ucrb4"]
 [ext_resource type="PackedScene" uid="uid://bd6ul8k706r1v" path="res://player/cat_negative.tscn" id="5_bojo3"]
 [ext_resource type="PackedScene" uid="uid://d0h0ttjsrp8j1" path="res://objects/lever_blue.tscn" id="5_x8mq8"]
+[ext_resource type="AudioStream" uid="uid://60q35cocph2" path="res://Sounds/walking.wav" id="6_nhhxo"]
+[ext_resource type="AudioStream" uid="uid://7r13my63if73" path="res://Sounds/background_music.mp3" id="8_7ex8k"]
 [ext_resource type="Texture2D" uid="uid://b1ri7kvsyrqpp" path="res://assets/images/shef_win.jpg" id="8_uadkh"]
 
 [node name="world" type="Node2D"]
@@ -27,6 +29,11 @@ position = Vector2(230, 130)
 [node name="cat_negative" parent="." instance=ExtResource("5_bojo3")]
 position = Vector2(30, 31)
 
+[node name="walking" type="AudioStreamPlayer" parent="cat_negative"]
+stream = ExtResource("6_nhhxo")
+volume_db = -19.676
+bus = &"New Bus"
+
 [node name="cat_normal" parent="." instance=ExtResource("2_xind8")]
 position = Vector2(291, 91)
 
@@ -37,3 +44,9 @@ visibility_layer = 15
 position = Vector2(189, 118.5)
 scale = Vector2(0.625828, 0.691176)
 texture = ExtResource("8_uadkh")
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7ex8k")
+volume_db = -30.919
+autoplay = true
+parameters/looping = true
